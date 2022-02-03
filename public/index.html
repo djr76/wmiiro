@@ -16,6 +16,12 @@
       content="Web site created using create-react-app"
     />
 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="menu.js" charset="utf-8"></script>
+
     <title>Winnie Miiro</title>
   </head>
   <body>
@@ -36,9 +42,13 @@
     
           <!--secondary nav -->
           <div class="hidden md:flex items-center space-x-4">
-            <a href="" class="py-5 px-3 text-green-600 hover:text-green-900">Story</a>
-            <a href="" class="py-5 px-3 text-green-600 hover:text-green-900">Mission</a>
-            <a href="" class="py-3 px-3 rounded bg-black text-gray-200 hover:bg-green-600 transition duration-300">Contact</a>
+              <button class="px-4 py-3 text-green-600" type="button" onclick="toggleModal('modals-id')">
+                Story
+              </button>
+              <button class="px-4 py-3 text-green-600" type="button" onclick="toggleModal('modalm-id')">
+                Mission
+              </button>
+            <a href="tel:908-456-0440" class="py-3 px-3 rounded bg-black text-gray-200 hover:bg-green-600 transition duration-300">Contact</a>
           </div>
           <!--mobile button here -->
           <div class="md:hidden flex items-center">
@@ -51,7 +61,7 @@
         </div>
         <!-- mobile menu -->
         <div class="mobile-menu hidden">
-          <a href="" class="block py-5 px-3 text-gray-700 hover:text-gray-900">Story</a>
+          <a href="" class="block py-5 px-3 text-gray-700 hover:text-gray-900" onclick="modals-id">Story</a>
           <a href="" class="block py-5 px-3 text-gray-700 hover:text-gray-900">Mission</a>
           <a href="" class="block py-5 px-3 text-gray-700 hover:text-gray-900">Contact</a>
         </div>
@@ -80,7 +90,7 @@
         <div class="lg:flex justify-evenly my-4 mx-8">
 
          <!--SaC --> 
-          <div class="bg-white max-w-sm rounded overflow-hidden shadow-lg mb-12 ml-4 mr-4">
+          <div class="bg-white max-w-sm rounded overflow-hidden shadow-lg mb-12 ml-4 mr-4 pb-4">
             <div class="shadow-inner flex justify-center items-center p-4">
               <img
                 class="w-full"
@@ -89,7 +99,7 @@
               />
             </div>
             <div class="px-6 py-2 text-center">
-              <div class="font-bold text-xl mb-2">
+              <div class="italic font-bold text-xl mb-2">
                 Strength and Conditioning
               </div>
               <p class="text-gray-700">
@@ -99,7 +109,7 @@
           </div>
 
           <!--KbT -->
-          <div class="bg-white max-w-sm rounded overflow-hidden shadow-lg mb-12 ml-4 mr-4">
+          <div class="bg-white max-w-sm rounded overflow-hidden shadow-lg mb-12 ml-4 mr-4 pb-4">
             <div class="shadow-inner flex justify-center items-center p-4">
               <img
                 class="w-full"
@@ -108,13 +118,13 @@
               />
             </div>
             <div class="px-6 py-2 text-center">
-              <div class="font-bold text-xl mb-2">Kettlebell Training</div>
+              <div class="italic font-bold text-xl mb-2">Kettlebell Training</div>
               <p class="text-gray-700">Build your power and endurance!</p>
             </div>
           </div>
 
            <!--EM --> 
-          <div class="bg-white max-w-sm rounded overflow-hidden shadow-lg mb-12 ml-4 mr-4">
+          <div class="bg-white max-w-sm rounded overflow-hidden shadow-lg mb-12 ml-4 mr-4 pb-4">
             <div class="shadow-inner flex justify-center items-center p-4">
               <img
                 class="w-full"
@@ -123,7 +133,7 @@
               />
             </div>
             <div class="px-6 py-2 text-center">
-              <div class="font-bold text-xl mb-2">Expecting Mothers</div>
+              <div class="italic font-bold text-xl mb-2">Expecting Mothers</div>
               <p class="text-gray-700">
                 Workouts tailored to your special situation.
               </p>
@@ -145,7 +155,7 @@
         <div class="lg:flex justify-evenly my-4 mx-8">
 
         <!--2 --> 
-        <div class="border-8 border-yellow-200 rounded-lg shadow-lg overflow-hidden mb-4 ml-4 mr-4">
+        <div class="border-4 border-yellow-200 rounded-lg shadow-lg overflow-hidden mb-4 ml-4 mr-4">
           <div class="px-6 py-8 bg-white dark:bg-gray-800 sm:p-10 sm:pb-6">
             <div class="flex justify-center">
               <span class="text-red-600 font-bold italic inline-flex px-4 py-1 dark:text-white rounded-full text-sm leading-5 font-semibold tracking-wide uppercase">
@@ -181,7 +191,7 @@
                   </svg>
                 </div>
                 <p class="ml-3 text-base leading-6 text-gray-700 dark:text-gray-200">
-                  25% In Home 
+                  25% off In Home 
                 </p>
               </li>
               <li class="mt-4 flex items-start">
@@ -423,13 +433,96 @@
       </div>
 
      <!--   Footer -->
-      <div class="font-Raleway font-bold bg-gradient-to-r from-green-600 via green-900 to-black p-4">
+      <div class="font-Raleway font-bold bg-gradient-to-r from-green-600 via green-900 to-black mt-10 p-4">
         <div>
           <p>©Copyright 2021 Winnie Miiro LLC</p>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- modals ---------------------------------------------------------------->
+  <!-- story modal -->
+  <div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center" id="modals-id">
+    <div class="relative w-auto my-6 mx-auto max-w-3xl">
+      <!--content-->
+      <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+        <!--header-->
+        <div class="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
+          <h3 class="font-Playfair text-3xl font-semibold">
+            My Story
+          </h3>
+          <button class="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none" onclick="toggleModal('modals-id')">
+            <span class="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+              ×
+            </span>
+          </button>
+        </div>
+        <!--body-->
+        <div class="relative p-6 flex-auto">
+          <p class="font-Raleway my-4 text-blueGray-500 text-lg leading-relaxed">
+            This is where you tell any story you want to tell to your potential clients. It can be a heart felt story about how Jax inspires you to be more happy or how your husband loves to eat peanut butter. None of that made any sense but who is reading this anyway?
+          </p>
+        </div>
+        <!--footer-->
+        <div class="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
+          <button class="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" onclick="toggleModal('modals-id')">
+            X
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hidden opacity-25 fixed inset-0 z-40 bg-black" id="modals-id-backdrop"></div>
+  <script type="text/javascript">
+    function toggleModal(modalID){
+      document.getElementById(modalID).classList.toggle("hidden");
+      document.getElementById(modalID + "-backdrop").classList.toggle("hidden");
+      document.getElementById(modalID).classList.toggle("flex");
+      document.getElementById(modalID + "-backdrop").classList.toggle("flex");
+    }
+  </script>
+
+   <!-- story modal -->
+   <div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center" id="modalm-id">
+    <div class="relative w-auto my-6 mx-auto max-w-3xl">
+      <!--content-->
+      <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+        <!--header-->
+        <div class="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
+          <h3 class="font-Playfair text-3xl font-semibold">
+            My Mission
+          </h3>
+          <button class="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none" onclick="toggleModal('modalm-id')">
+            <span class="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+              ×
+            </span>
+          </button>
+        </div>
+        <!--body-->
+        <div class="relative p-6 flex-auto">
+          <p class="font-Raleway my-4 text-blueGray-500 text-lg leading-relaxed">
+            My Mission is to guide and assist my clients to be the best versions of themselves. Everyone has different fitness goals and personality and I make it my mission to understand them and be the best trainer I can be for them.
+          </p>
+        </div>
+        <!--footer-->
+        <div class="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
+          <button class="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" onclick="toggleModal('modalm-id')">
+            X
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hidden opacity-25 fixed inset-0 z-40 bg-black" id="modalm-id-backdrop"></div>
+  <script type="text/javascript">
+    function toggleModal(modalID){
+      document.getElementById(modalID).classList.toggle("hidden");
+      document.getElementById(modalID + "-backdrop").classList.toggle("hidden");
+      document.getElementById(modalID).classList.toggle("flex");
+      document.getElementById(modalID + "-backdrop").classList.toggle("flex");
+    }
+  </script>
 
   </body>
 </html>
