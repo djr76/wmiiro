@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="images/ww.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,56 +15,67 @@
       name="description"
       content="Web site created using create-react-app"
     />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+        
 
-    <script src="menu.js" charset="utf-8"></script>
+        
+        
+    
 
-    <title>Winnie Miiro</title>
+    <title>Miiro World</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+
+  
+
+
+
     <!-- <div id="root"></div> -->
     <nav class="bg-gray-100">
       <div class="px-12 mx-auto">
         <div class="flex justify-between">
-          <!-- <div class="flex space-x-4"> -->
-    
-            <!--logo -->
+            <!-- logo -->
             <div>
               <a href="#" class="flex items-center py-5 px-2 text-green-600">
-                <span class="text-8xl font-bold font-Imperial">Winnie Miiro</span>
+                <span class="text-8xl font-bold font-Imperial">Miiro World</span>
               </a>
             </div>
-          <!-- </div> -->
     
-          <!--secondary nav -->
+    
+          <!-- nav -->
           <div class="hidden md:flex items-center space-x-4">
-              <button class="px-4 py-3 text-green-600" type="button" onclick="toggleModal('modals-id')">
-                Story
-              </button>
-              <button class="px-4 py-3 text-green-600" type="button" onclick="toggleModal('modalm-id')">
-                Mission
-              </button>
-            <a href="tel:908-456-0440" class="py-3 px-3 rounded bg-black text-gray-200 hover:bg-green-600 transition duration-300">Contact</a>
-          </div>
-          <!--mobile button here -->
+            <button class="px-4 py-3 text-green-600" type="button" onclick="toggleModal('modals-id')">
+              Story
+            </button>
+            <button class="px-4 py-3 text-green-600" type="button" onclick="toggleModal('modalm-id')">
+              Mission
+            </button>
+          <a href="tel:908-456-0440" class="py-3 px-3 rounded bg-black text-gray-200 hover:bg-green-600 transition duration-300">Contact</a>
+        </div>
+    
+          <!-- mobile button goes here -->
           <div class="md:hidden flex items-center">
             <button class="mobile-menu-button">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
           </div>
+    
         </div>
-        <!-- mobile menu -->
-        <div class="mobile-menu hidden">
-          <a href="" class="block py-5 px-3 text-gray-700 hover:text-gray-900" onclick="modals-id">Story</a>
-          <a href="" class="block py-5 px-3 text-gray-700 hover:text-gray-900">Mission</a>
-          <a href="" class="block py-5 px-3 text-gray-700 hover:text-gray-900">Contact</a>
-        </div>
+      </div>
+    
+      <!-- mobile menu -->
+      <div class="mobile-menu hidden md:hidden space-x-12">
+        <a href="" class="block py-5 px-3 text-gray-700 hover:text-gray-900"></a>
+        <a href="" class="block py-5 px-3 text-gray-700 hover:text-gray-900" onclick="modals-id">Story</a>
+        <a href="" class="block py-5 px-3 text-gray-700 hover:text-gray-900" onclick="modalm-id">Mission</a>
+        <a href="" class="block py-5 px-3 text-gray-700 hover:text-gray-900">Contact</a>
       </div>
     </nav>
     
@@ -141,7 +152,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>yahoo
 
     <!--   section-4 Pricing -->
 
@@ -350,7 +361,7 @@
                 <!-- <span class="ml-1 mr-3 text-xl leading-8 font-medium text-gray-500 dark:text-gray-400">
                   from
                 </span> -->
-                $25
+                $50
                 <span class="ml-1 pt-8 text-2xl leading-8 font-medium text-gray-500 dark:text-gray-400">
                   /workout
                 </span>
@@ -448,10 +459,17 @@
       <!--content-->
       <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
         <!--header-->
-        <div class="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
-          <h3 class="font-Playfair text-3xl font-semibold">
+        <div class="flex items-start justify-between p-5 rounded-t">
+          <!-- <div class="flex justify-between"> -->
+          <h3 class="text-green-600 font-Playfair text-3xl font-semibold">
             My Story
           </h3>
+          <img
+                class="w-2/3"
+                src="images/twist.png"
+                alt="EM"
+              />
+            <!-- </div> -->
           <button class="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none" onclick="toggleModal('modals-id')">
             <span class="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
               ×
@@ -460,7 +478,7 @@
         </div>
         <!--body-->
         <div class="relative p-6 flex-auto">
-          <p class="font-Raleway my-4 text-blueGray-500 text-lg leading-relaxed">
+          <p class="italic font-Raleway my-4 text-blueGray-500 text-xl leading-relaxed">
             This is where you tell any story you want to tell to your potential clients. It can be a heart felt story about how Jax inspires you to be more happy or how your husband loves to eat peanut butter. None of that made any sense but who is reading this anyway?
           </p>
         </div>
@@ -483,17 +501,24 @@
     }
   </script>
 
-   <!-- story modal -->
+   <!-- mission modal -->
    <div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center" id="modalm-id">
     <div class="relative w-auto my-6 mx-auto max-w-3xl">
       <!--content-->
-      <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+      <div class="px-4 border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
         <!--header-->
-        <div class="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
-          <h3 class="font-Playfair text-3xl font-semibold">
+        <div class="flex items-start justify-between p-5  rounded-t">
+          <!-- <div class="flex justify-between"> -->
+          <h3 class="text-green-600 font-Playfair text-3xl font-semibold">
             My Mission
           </h3>
-          <button class="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none" onclick="toggleModal('modalm-id')">
+          <img
+                class="w-2/3"
+                src="images/warrior2.png"
+                alt="EM"
+              />
+            <!-- </div> -->
+          <button class="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none" onclick="toggleModal('modals-id')">
             <span class="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
               ×
             </span>
@@ -501,7 +526,7 @@
         </div>
         <!--body-->
         <div class="relative p-6 flex-auto">
-          <p class="font-Raleway my-4 text-blueGray-500 text-lg leading-relaxed">
+          <p class="italic font-Raleway my-4 text-blueGray-500 text-xl leading-relaxed">
             My Mission is to guide and assist my clients to be the best versions of themselves. Everyone has different fitness goals and personality and I make it my mission to understand them and be the best trainer I can be for them.
           </p>
         </div>
@@ -523,10 +548,20 @@
       document.getElementById(modalID + "-backdrop").classList.toggle("flex");
     }
   </script>
-  <script>
-    const btn = document.querySelector("button.mobile-menu-button");
-const menu = document.querySelector(".mobile-menu");
-  </script>
-
   </body>
 </html>
+
+<div id="output"></div>
+<!-- Load Babel -->
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<!-- Your custom script here -->
+<script type="text/babel">
+// grab everything we need
+const btn = document.querySelector(".mobile-menu-button");
+const menu = document.querySelector(".mobile-menu");
+
+// add event listeners
+btn.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+});
+</script>
