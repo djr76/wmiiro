@@ -20,22 +20,14 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-        
 
-        
-        
-    
 
     <title>Miiro World</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
-  
 
-
-
-    <!-- <div id="root"></div> -->
     <nav class="bg-gray-100">
       <div class="px-12 mx-auto">
         <div class="flex justify-between">
@@ -73,15 +65,16 @@
       <!-- mobile menu -->
       <div class="mobile-menu hidden md:hidden space-x-12">
         <a href="" class="block py-5 px-3 text-gray-700 hover:text-gray-900"></a>
-        <a href="" class="block py-5 px-3 text-gray-700 hover:text-gray-900" onclick="modals-id">Story</a>
-        <a href="" class="block py-5 px-3 text-gray-700 hover:text-gray-900" onclick="modalm-id">Mission</a>
-        <a href="" class="block py-5 px-3 text-gray-700 hover:text-gray-900">Contact</a>
+        <button class="block px-4 py-3 text-green-600 hover:text-green-800" type="button" onclick="toggleModal('modals-id')">
+          Story
+          <button class="block px-4 py-3 text-green-600 hover:text-green-800" type="button" onclick="toggleModal('modalm-id')">
+            Mission
+          </button>
+        <a href="tel:908-456-0440" class="block px-4 py-3 font-bold text-green-600 hover:text-green-800">Contact</a>
       </div>
     </nav>
     
     <!--   section-2 Video------------------------------------------------------------------------------------------->
-    
-    <!-- <div class="bg-gradient-to-r from-green-600 via green-900 to-black p-10"> -->
     <div class="bg-gray-100 p-10">
       <div class="flex justify-around items-center">
           <video class="video" id="bVide" controls autoplay>
